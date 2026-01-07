@@ -12,16 +12,6 @@ class Tracer:
         """
         raise NotImplementedError("This method should be overridden by subclasses.")
     
-    def n_of_L(self, L) -> np.ndarray:
-        """
-        Returns the luminosity function n(L) for the tracer.
-        Parameters:
-            L (np.ndarray): Array of luminosity values.
-        Returns:
-            np.ndarray: Array of n(L) values corresponding to input luminosities.
-        """        
-        raise NotImplementedError("This method should be overridden by subclasses.")
-    
     def sample_redshifts(self, n) -> np.ndarray:
         """
         Generates a sample of redshifts according to the tracer's n_of_z distribution using rejection sampling.
@@ -58,16 +48,6 @@ class Tracer:
         """        # Placeholder implementation: uniform distribution between -22 and -18
         return np.random.uniform(-22, -18, size=n)
     
-    def sample_colors(self, n) -> np.ndarray:
-        """
-        Generates a sample of colors for the tracer.
-        Parameters:
-            n (int): Number of color samples to generate.
-        Returns:
-            np.ndarray: Array of sampled colors.
-        """        # Placeholder implementation: uniform distribution between 0 and 2
-        return np.random.uniform(0, 2, size=n)
-    
     def sample_peculiar_velocity(self, n) -> np.ndarray:
         """
         Generates a sample of velocities for the tracer.
@@ -77,16 +57,6 @@ class Tracer:
             np.ndarray: Array of sampled velocities.
         """        # Placeholder implementation: normal distribution with mean 0 and stddev 300 km/s
         return np.random.normal(0, 300, size=n)
-    
-    def sample_halo_mass(self, n) -> np.ndarray:
-        """
-        Generates a sample of halo masses for the tracer.
-        Parameters:
-            n (int): Number of halo mass samples to generate.
-        Returns:
-            np.ndarray: Array of sampled halo masses.
-        """        # Placeholder implementation: log-normal distribution with mean 12 and stddev 0.5 in log10(M/Msun)
-        return 10 ** np.random.normal(12, 0.5, size=n)
 
 # ------------------------------------------------------------------------------ Tracer Subclasses ------------------------------------------------------------------------------
 
@@ -114,6 +84,9 @@ class LRG(Tracer): # Luminous Red Galaxy
         """
         n_of_z = 0.5 * (erf((z - self.z_min) / np.sqrt(2) * self.sigma) - erf((z - self.z_max) / np.sqrt(2) * self.sigma))
         return n_of_z
+    
+    def sample_absolute_magnitudes(self, n):
+        
     
 # ------------------------------------------------------------------------------ ELG Tracer ------------------------------------------------------------------------------
 
