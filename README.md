@@ -71,16 +71,17 @@ Distribution: Configure the pipeline to build a binary wheel (.whl) of your pack
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-Summary of the "CosmoFlow" Architecture 
-Component      | Syllabus Modules | Cosmology Task
-src/cosmoflow  | 5, 6, 7, 12, 13  | OOP Galaxy Generators, Cython Correlation Function
-tests/         | 10               | Verify statistical properties of mock 
-datadocs/      | 8                | LaTeX explanations of $\xi(r)$ and bias
-cli.py         | 1, 2, 9, 11      | Command line tool to run simulations
-api/ (FastAPI) | 14               | HTTP wrapper around the Python package
-web/ (Next.js) | 15               | Interactive Cone Plot & Data Dashboard
-.github/       | 4, 17            | CI/CD actions for testing and building
-Dockerfile     | 16               | Containerizing the complex Cython build
+| Summary of the "CosmoFlow" Architecture 
+| Component      | Syllabus Modules | Cosmology Task                                     |
+|:---------------|:-----------------|:---------------------------------------------------|
+| src/cosmoflow  | 5, 6, 7, 12, 13  | OOP Galaxy Generators, Cython Correlation Function |
+| tests/         | 10               | Verify statistical properties of mock              |
+| datadocs/      | 8                | LaTeX explanations of $\xi(r)$ and bias            |
+| cli.py         | 1, 2, 9, 11      | Command line tool to run simulations               |
+| api/ (FastAPI) | 14               | HTTP wrapper around the Python package             |
+| web/ (Next.js) | 15               | Interactive Cone Plot & Data Dashboard             |
+| .github/       | 4, 17            | CI/CD actions for testing and building             |
+| Dockerfile     | 16               | Containerizing the complex Cython build            |
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
