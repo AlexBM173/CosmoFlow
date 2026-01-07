@@ -71,7 +71,8 @@ Distribution: Configure the pipeline to build a binary wheel (.whl) of your pack
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-| Summary of the "CosmoFlow" Architecture 
+Summary of the "CosmoFlow" Architecture
+
 | Component      | Syllabus Modules | Cosmology Task                                     |
 |:---------------|:-----------------|:---------------------------------------------------|
 | src/cosmoflow  | 5, 6, 7, 12, 13  | OOP Galaxy Generators, Cython Correlation Function |
